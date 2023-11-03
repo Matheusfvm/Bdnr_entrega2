@@ -1,4 +1,8 @@
-import modelo
+from servicos.usuario import *
+from servicos.vendedor import *
+from servicos.produto import *
+from servicos.compra import *
+
 
 key = 0
 sub = 0
@@ -17,42 +21,47 @@ while key != 'S':
         print("3 - Atualizar Usuário")
         print("4 - Apagar Usuário")
         print("5 - Adicionar novo Endereço")
-        print("6 - Favoritar Produto")
-        print("7 - Listar Favoritos")
-        print("8 - Desfavoritar Produto")
+        print("6 - Listar Compras")
+        print("7 - Favoritar Produto")
+        print("8 - Listar Favoritos")
+        print("9 - Desfavoritar Produto")
         sub = input("\nDigite a opção desejada? (V para voltar) ")
 
         if sub == "1":
             print("\n----INSERIR USUÁRIO----\n")
-            modelo.criarUsuario()
+            criarUsuario()
             
         elif sub == "2":
             print("\n----LISTAR USUÁRIO----\n")
-            modelo.listarUsuario()
+            listarUsuario()
         
         elif sub == "3":
             print("\n----ATUALIZAR USUÁRIO----\n")
-            modelo.atualizarUsuario()
+            atualizarUsuario()
 
         elif sub == "4":
             print("\n----DELETAR USUÁRIO----")
-            modelo.deletarUsuario()
+            deletarUsuario()
         
         elif sub == "5":
             print("\n----ADICIONAR ENDEREÇO----\n")
-            modelo.criarEndereco()
-
+            criarEndereco()
+        
         elif sub == "6":
-            print("\n----FAVORITAR PRODUTO----\n")
-            modelo.criarFavorito()
+            print("\n----LISTAR COMPRAS----\n")
+            listarComprasUsuario()
 
         elif sub == "7":
-            print("\n----LISTAR FAVORITOS----\n")
-            modelo.listarFavorito()
+            print("\n----FAVORITAR PRODUTO----\n")
+            criarFavorito()
 
         elif sub == "8":
+            print("\n----LISTAR FAVORITOS----\n")
+            listarFavorito()
+
+        elif sub == "9":
             print("\n----DESFAVORITAR PRODUTO----\n")
-            modelo.deletarFavorito()
+            deletarFavorito()
     
     elif key == '2':
         print("\n-----------------")
@@ -65,19 +74,19 @@ while key != 'S':
 
         if sub == "1":
             print("\n----INSERIR VENDEDOR----\n")
-            modelo.criarVendedor()
+            criarVendedor()
             
         elif sub == "2":
             print("\n----LISTAR VENDEDOR----\n")
-            modelo.listarVendedor()
+            listarVendedor()
         
         elif sub == "3":
             print("\n----ATUALIZAR VENDEDOR----\n")
-            modelo.atualizarVendedor()
+            atualizarVendedor()
 
         elif sub == "4":
             print("\n----DELETAR VENDEDOR----")
-            modelo.deletarVendedor()
+            deletarVendedor()
 
     elif key == '3':
         print("\n-----------------")
@@ -90,19 +99,19 @@ while key != 'S':
 
         if sub == "1":
             print("\n----INSERIR PRODUTO----\n")
-            modelo.criarProduto()
+            criarProduto()
             
         elif sub == "2":
             print("\n----LISTAR PRODUTO----\n")
-            modelo.listarProduto()
+            listarProduto()
         
         elif sub == "3":
             print("\n----ATUALIZAR PRODUTO----\n")
-            modelo.atualizarProduto()
+            atualizarProduto()
 
         elif sub == "4":
             print("\n----DELETAR PRODUTO----\n")
-            modelo.deletarProduto()
+            deletarProduto()
         
     elif key == '4':
         print("\n-----------------")
@@ -113,10 +122,10 @@ while key != 'S':
 
         if sub == "1":
             print("\n----COMPRAR UM PRODUTO----\n")
-            modelo.criarCompra()
+            criarCompra()
         
         if sub == "2":
             print("\n----LISTAR COMPRAS----\n")
-            modelo.listarCompra()
+            listarCompras()
     elif key == "S":
         break
