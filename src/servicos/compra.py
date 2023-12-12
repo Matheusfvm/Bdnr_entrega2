@@ -20,7 +20,7 @@ def criarCompra():
     while key == "S":        
         produtoEscolhido = produto.consultaProduto()
         if produtoEscolhido["quantidade"] != 0:
-            quantidadeProdutoCompra = int(input(f"Unidades de produtos compradas(max = {produtoEscolhido["quantidade"]}): "))        
+            quantidadeProdutoCompra = int(input(f"Unidades de produtos compradas(max = {produtoEscolhido['quantidade']}): "))        
             quantidadeProdutoCompraFinal = produto.diminuirQuantidadeProduto(quantidadeProdutoCompra, produtoEscolhido)
             vendedor.alterarQuantidadeProdutoVendedor(quantidadeProdutoCompraFinal[1], produtoEscolhido)
             produtoObjeto = {
@@ -32,7 +32,7 @@ def criarCompra():
             listaProduto.append(produtoObjeto)    
             valortotalCompra += produtoEscolhido["preco"] * quantidadeProdutoCompraFinal[0]    
         else:
-            print(f"Produto {produtoEscolhido["descricao"]} está em falta!")
+            print(f"Produto {produtoEscolhido['descricao']} está em falta!")
         key = str(input("Deseja comprar um outro produto(S/N)? "))
     dataCompraEntrega = str(input("Data da entrega(dd/mm/AAAA): "))
     listaNomeEmailUsuario = usuario.vinculaCompraUsuario(listaProduto, dataCompraEntrega, valortotalCompra)  
@@ -58,15 +58,15 @@ def listarCompras():
     indiceCompra = 1
     for compra in listaCompra:
         print(f"\n{indiceCompra}º Compra\n")
-        print(f"Usuário email: {compra["usuario"]["email"]}")
-        print(f"Data e hora da compra: {compra["data_compra"]}")
-        print(f"Data entrega: {compra["data_entrega_compra"]}\n")
-        print(f"Valor total da compra: R${compra["valor_total_compra"]:.2f}")
+        print(f"Usuário email: {compra['usuario']['email']}")
+        print(f"Data e hora da compra: {compra['data_compra']}")
+        print(f"Data entrega: {compra['data_entrega_compra']}\n")
+        print(f"Valor total da compra: R${compra['valor_total_compra']:.2f}")
         print("\nProdutos\n")
         for produto in compra["lista_produto"]:
-            print(f"Descrição: {produto["descricao"]}")
-            print(f"Preço: {produto["preco"]:.2f}")
-            print(f"Quantidade: {produto["quantidade_produto_compra"]}")
+            print(f"Descrição: {produto['descricao']}")
+            print(f"Preço: {produto['preco']:.2f}")
+            print(f"Quantidade: {produto['quantidade_produto_compra']}")
             print("\n---------------------------------------\n")
             
             

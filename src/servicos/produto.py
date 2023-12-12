@@ -81,12 +81,12 @@ def atualizarProduto():
 def listarProduto():
     produtoEscolhido = consultaProduto()
     print("\nProduto")
-    print(f"\nDescrição: {produtoEscolhido["descricao"]}")
-    print(f"Preço: R${produtoEscolhido["preco"]:.2f}")
-    print(f"Quantidade: {produtoEscolhido["quantidade"]}")
+    print(f"\nDescrição: {produtoEscolhido['descricao']}")
+    print(f"Preço: R${produtoEscolhido['preco']:.2f}")
+    print(f"Quantidade: {produtoEscolhido['quantidade']}")
     print("\nVendedor\n")
-    print(f"Nome: {produtoEscolhido["vendedor"]["nome"]}")
-    print(f"Email: {produtoEscolhido["vendedor"]["email"]}")
+    print(f"Nome: {produtoEscolhido['vendedor']['nome']}")
+    print(f"Email: {produtoEscolhido['vendedor']['email']}")
 
 def deletarProduto():
     produtoEscolhido = consultaProduto()

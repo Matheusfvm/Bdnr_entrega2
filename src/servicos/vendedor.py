@@ -49,15 +49,15 @@ def atualizarVendedor():
 def listarVendedor():
     vendedorEscolhido = consultaVendedor()
     print("\nVendedor")
-    print(f"\nNome: {vendedorEscolhido["nome"]}")
-    print(f"Documento: {vendedorEscolhido["documento"]}")
-    print(f"Email: {vendedorEscolhido["email"]}")
-    print(f"Senha: {vendedorEscolhido["senha"]}\n")
+    print(f"\nNome: {vendedorEscolhido['nome']}")
+    print(f"Documento: {vendedorEscolhido['documento']}")
+    print(f"Email: {vendedorEscolhido['email']}")
+    print(f"Senha: {vendedorEscolhido['senha']}\n")
     print("Produtos")
-    for produto in vendedorEscolhido["lista_produto"]:
-        print(f"\nDescrição: {produto["descricao"]}")
-        print(f"Preço: R${produto["preco"]}")
-        print(f"Quantidade: {produto["quantidade"]}")
+    for produto in vendedorEscolhido['lista_produto']:
+        print(f"\nDescrição: {produto['descricao']}")
+        print(f"Preço: R${produto['preco']}")
+        print(f"Quantidade: {produto['quantidade']}")
         print("\n---------------------------------------\n")
 
 def deletarVendedor():

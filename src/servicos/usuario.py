@@ -56,19 +56,19 @@ def criarUsuario():
 
 def listarUsuario():    
     usuarioEscolhido = consultaUsuario()
-    print(f"Nome: {usuarioEscolhido["nome"]}")
-    print(f"Cpf: {usuarioEscolhido["cpf"]}")
-    print(f"Email: {usuarioEscolhido["email"]}")
-    print(f"Senha: {usuarioEscolhido["senha"]}")
-    print(f"Telefone: {usuarioEscolhido["telefone"]}")
+    print(f"Nome: {usuarioEscolhido['nome']}")
+    print(f"Cpf: {usuarioEscolhido['cpf']}")
+    print(f"Email: {usuarioEscolhido['email']}")
+    print(f"Senha: {usuarioEscolhido['senha']}")
+    print(f"Telefone: {usuarioEscolhido['telefone']}")
     print("\nEndereços:")
-    for endereco in usuarioEscolhido["lista_endereco"]:
-        print(f"Cep: {endereco["cep"]}")
-        print(f"Rua/Avenida: {endereco["rua_avenida"]}")
-        print(f"Número: {endereco["numero"]}")
-        print(f"Bairro: {endereco["bairro"]}")
-        print(f"Cidade: {endereco["cidade"]}")
-        print(f"Estado: {endereco["estado"]}")
+    for endereco in usuarioEscolhido['lista_endereco']:
+        print(f"Cep: {endereco['cep']}")
+        print(f"Rua/Avenida: {endereco['rua_avenida']}")
+        print(f"Número: {endereco['numero']}")
+        print(f"Bairro: {endereco['bairro']}")
+        print(f"Cidade: {endereco['cidade']}")
+        print(f"Estado: {endereco['estado']}")
         print("\n---------------------------------------\n")
 
 def atualizarUsuario():
@@ -150,9 +150,9 @@ def listarComprasUsuario():
     for compra in usuarioEscolhido["lista_compra"]:
         print("\nProdutos")
         for produto in compra["lista_produto"]:
-            print(f"Descrição: {produto["descricao"]}")
-            print(f"Quantidade: {produto["quantidade"]}")
-            print(f"Preço Total: R${produto["valor_total_compra"]}")
+            print(f"Descrição: {produto['descricao']}")
+            print(f"Quantidade: {produto['quantidade']}")
+            print(f"Preço Total: R${produto['valor_total_compra']}")
             print("\n---------------------------------------\n")
 
 
@@ -180,8 +180,8 @@ def listarFavorito():
     usuarioEscolhido = consultaUsuario()
     print("\nProdutos")
     for favorito in usuarioEscolhido["lista_favorito"]:
-        print(f"Descrição: {favorito["descricao"]}")
-        print(f"Preço: R${favorito["preco"]}")
+        print(f"Descrição: {favorito['descricao']}")
+        print(f"Preço: R${favorito['preco']}")
         print("\n---------------------------------------\n")
 
 def deletarFavorito():     
